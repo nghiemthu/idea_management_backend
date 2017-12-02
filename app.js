@@ -17,6 +17,6 @@ app.use("", index);
 
 app.use(express.static('public'));
 
-app.listen(8080 || process.env.PORT, process.env.IP, function(){
+app.listen(process.env.PORT || 8080, process.env.IP, function(){
     console.log('server started');
 });

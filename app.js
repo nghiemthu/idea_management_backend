@@ -4,6 +4,7 @@ var express         = require("express"),
     mongoose        = require("mongoose"),
     bodyParser      = require("body-parser");
 
+import knex from "./utils/db";
 
 app.use(bodyParser.urlencoded({extended: true}));
 
@@ -16,8 +17,14 @@ app.get('/', (req, res) => {
   res.send('index');
 });
 
+
+app.get('/test', (req, res) => {
+	knex('comment').where({ id: 2 }).then(data => res.send(data));
+});
+
+
 app.use(express.static('public'));
 
 app.listen(8080 || process.env.PORT, process.env.IP, function(){
     console.log('server started');
-})
+});

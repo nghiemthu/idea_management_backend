@@ -4,7 +4,7 @@ var express         = require("express"),
     mongoose        = require("mongoose"),
     bodyParser      = require("body-parser");
 
-import knex from "./utils/db";
+var index           = require("./src/routes/index");
 
 app.use(bodyParser.urlencoded({extended: true}));
 
@@ -13,15 +13,7 @@ app.use(require('body-parser').json());
 
 mongoose.Promise = require('bluebird');
 
-app.get('/', (req, res) => {
-  res.send('index');
-});
-
-
-app.get('/test', (req, res) => {
-	knex('comment').where({ id: 2 }).then(data => res.send(data));
-});
-
+app.use("", index);
 
 app.use(express.static('public'));
 

@@ -7,7 +7,6 @@ exports.up = knex =>
      */
     .createTableIfNotExists('members', (table) => {
       table.increments('id').primary();
-      table.timestamp('createdAt').defaultTo(knex.fn.now());
       table
         .text('email')
         .notNullable()
@@ -15,4 +14,4 @@ exports.up = knex =>
       table.text('username').notNullable().unique();
     })
 
-exports.down = knex => knex.schema.dropTableIfExists('users');
+exports.down = knex => knex.schema.dropTableIfExists('members');

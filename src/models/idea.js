@@ -7,5 +7,5 @@ export const dbGetIdeas = () =>
   knex('idea').select(ideaFields);
 export const dbGetIdeasById = () =>
   knex('idea', 'id').select(ideaFields);
-export const dbGetIdeasById = () =>
-  knex('idea', 'id').select(ideaFields);
+export const dbGetIdeasCommentById = () =>
+  knex('idea', 'id', 'isReadyForComments').select(ideaFields);

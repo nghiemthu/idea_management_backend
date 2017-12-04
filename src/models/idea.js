@@ -5,3 +5,7 @@ const ideaFields = ['id', 'title', 'description', 'budget', 'isReadyForComments'
 
 export const dbGetIdeas = () =>
   knex('idea').select(ideaFields);
+export const dbGetIdeasById = () =>
+  knex('idea', 'id').select(ideaFields);
+export const dbGetIdeasById = () =>
+  knex('idea', 'id').select(ideaFields);

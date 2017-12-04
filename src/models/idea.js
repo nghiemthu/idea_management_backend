@@ -10,4 +10,4 @@ export const dbGetIdeasById = () =>
 export const dbGetIdeasCommentById = () =>
   knex('idea', 'id', 'isReadyForComments').select(ideaFields);
 export const dbDeleteIdeasById = () =>
-  knex('ideaFields).where();
+  knex('ideaFields).where('id');

@@ -4,7 +4,7 @@ const ideaFields = ['id', 'title', 'description', 'budget', 'isReadyForComments'
 'creationDate', 'lastModified', 'categoryId'];
 
 export const dbGetIdeas = () =>
-  knex.select('idea').from(idea);
+  knex('idea').select();
 export const dbGetIdeasById = (id) =>
   knex('idea', 'id').select(idea);
 export const dbGetIdeasCommentById = () =>

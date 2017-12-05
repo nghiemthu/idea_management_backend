@@ -11,7 +11,9 @@ export const dbGetIdeasCommentById = () =>
   knex('idea').select('title', 'id', 'isReadyForComments');
 export const dbDeleteIdeasById = () =>
   knex('idea').where( 'id', id).del();
-export const dbPostIdeasById = () =>
-  knex('idea').select('title', 'id', 'isReadyForComments');
+export const dbPostIdeas = () =>
+  knex('idea').insert('id', 'title', 'description', 'budget', 'isReadyForComments', 'peopleNeeded', 
+'creationDate', 'lastModified', 'categoryId');
 export const dbPutIdeasById = () =>
-  knex('idea').select('title', 'id', 'isReadyForComments');
+  knex('idea').where('id', id).update('id', 'title', 'description', 'budget', 'isReadyForComments', 'peopleNeeded', 
+'creationDate', 'lastModified', 'categoryId');

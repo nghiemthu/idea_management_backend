@@ -11,7 +11,7 @@ export const dbGetIdeasCommentById = () =>
   knex('idea').select('title', 'id', 'isReadyForComments');
 export const dbDeleteIdeasById = () =>
   knex('idea').where( 'id', id).del();
-export const dbGetIdeasCommentById = () =>
+export const dbPostIdeasById = () =>
   knex('idea').select('title', 'id', 'isReadyForComments');
-export const dbGetIdeasCommentById = () =>
+export const dbPutIdeasById = () =>
   knex('idea').select('title', 'id', 'isReadyForComments');

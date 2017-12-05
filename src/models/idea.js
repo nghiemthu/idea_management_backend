@@ -6,12 +6,12 @@ const ideaFields = ['id', 'title', 'description', 'budget', 'isReadyForComments'
 export const dbGetIdeas = () =>
   knex('idea').select('title');
 export const dbGetIdeasById = (id) =>
-  knex('idea').select('title');
+  knex('idea').select('title', 'id');
 export const dbGetIdeasCommentById = () =>
-  knex('idea', 'id', 'isReadyForComments').select(idea);
+  knex('idea').select('title', 'id', 'isReadyForComments');
 export const dbDeleteIdeasById = () =>
-  knex('ideaFields).where( id, 'id');
+  knex('idea').where( 'id', id).del();
 export const dbGetIdeasCommentById = () =>
-  knex('idea', 'id', 'isReadyForComments').select(idea);
+  knex('idea').select('title', 'id', 'isReadyForComments');
 export const dbGetIdeasCommentById = () =>
-  knex('idea', 'id', 'isReadyForComments').select(idea);
+  knex('idea').select('title', 'id', 'isReadyForComments');

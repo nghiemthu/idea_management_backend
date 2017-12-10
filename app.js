@@ -6,8 +6,6 @@ var express         = require("express"),
 
 var index           = require("./src/routes/index");
 
-app.use(bodyParser.urlencoded({extended: true}));
-
 app.use(require('body-parser').urlencoded({ extended: false }));
 app.use(require('body-parser').json());
 

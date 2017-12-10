@@ -4,16 +4,19 @@ const ideaFields = ['id', 'title', 'description', 'budget', 'isReadyForComments'
 'creationDate', 'lastModified', 'categoryId'];
 
 export const dbGetIdeas = () =>
-  knex('idea').select('title');
+  knex('idea').select(ideaFields);
+
 export const dbGetIdeasById = (id) =>
-  knex('idea').select('title', 'id').where({id});
-export const dbGetIdeasCommentById = (id) =>
-  knex('idea').select('title', 'id', 'isReadyForComments').where({id});
-export const dbDeleteIdeasById = (id) =>
+  knex('idea').select(ideaFields).where({id});
+
+export const dbCreateIdea = ({ ...fields }) =>
+	knex('idea')
+	  .insert(fields)
+	  .returning('*')
+	  .then(results => results[0]); // return only first result
+
+export const dbDeleteIdeaById = (id) =>
   knex('idea').where({id}).del();
-export const dbPostIdeas = () =>
-  knex('idea').insert('id', 'title', 'description', 'budget', 'isReadyForComments', 'peopleNeeded', 
-'creationDate', 'lastModified', 'categoryId');
-export const dbPutIdeasById = (id) =>
-  knex('idea').where({id}).update('id', 'title', 'description', 'budget', 'isReadyForComments', 'peopleNeeded', 
-'creationDate', 'lastModified', 'categoryId');
+
+export const dbUpdateIdeaById = (id, payload) =>
+  knex('idea').where({id}).update(payload);

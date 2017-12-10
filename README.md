@@ -17,3 +17,28 @@ Run server:
 ```
 $ yarn build | npm run build
 ```
+
+API: 
+
+```
+Idea:
+
+GET: /api/ideas
+GET: /api/ideas/:id
+
+POST: /api/ideas 
+body: title, description, budget, isReadyForComments, peopleNeeded, categoryId
+
+PUT: /api/ideas/:id
+body: title, description, budget, isReadyForComments, peopleNeeded, categoryId
+
+DELETE: /api/ideas/:id
+
+```
+
+```
+Comment:
+
+GET: /api/ideas/:id/comments
+
+```

@@ -36,14 +36,19 @@
     "bluebird": "^3.5.0",
     "body-parser": "^1.17.2",
     "cookie-parser": "^1.4.3",
+    "dotenv": "^4.0.0",
     "ejs": "^2.5.7",
     "express": "^4.15.4",
     "express-session": "^1.15.5",
+    "faker": "^4.1.0",
+    "knex": "^0.14.2",
     "mongoose": "^4.11.9",
     "morgan": "^1.8.2",
     "passport": "^0.4.0",
     "passport-session": "^1.0.2",
     "passport-twitter": "^1.0.4",
+    "pg": "^7.4.0",
+    "prompt": "^1.0.0",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
     "react-redux": "^5.0.6",
@@ -51,6 +56,7 @@
     "redux": "^3.7.2",
     "redux-actions": "^2.2.1",
     "redux-thunk": "^2.2.0",
+    "simple-fixtures": "^1.0.1",
     "webpack": "^1.13.2"
   }
 }

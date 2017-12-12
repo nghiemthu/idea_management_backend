@@ -1,1 +1,1 @@
-web: npm run db:imgrate && npm start
+web: npm run db:migrate && npm start

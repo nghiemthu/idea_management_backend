@@ -32,12 +32,12 @@ const config = {
     // Common config for all db environments
     debug: true, // Toggle db debugging
     client: 'pg',
-    connection: process.env.DATABASE_URL || {
+    connection: env.DATABASE_URL || {
       host: '127.0.0.1',
       user: 'postgres',
       password: '',
       database: 'backendkit',
-      ssl: true,
+      ssl: false,
     },
     pool: {
       min: 1,

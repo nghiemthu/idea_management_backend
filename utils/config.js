@@ -33,7 +33,7 @@ const config = {
     debug: true, // Toggle db debugging
     client: 'pg',
     connection: process.env.DATABASE_URL || {
-      host:  '127.0.0.1',
+      host:  'postgres://iumbojeihyvvrr:51ec8c86ec8fa6c8827e1c30982c263fbfd684e5dd27b37ab926214d7c9aa024@ec2-54-243-39-245.compute-1.amazonaws.com:5432/d8680iv0mr6sdb',
       user: 'postgres',
       password: '',
       database: 'backendkit',

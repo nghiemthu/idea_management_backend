@@ -38,7 +38,7 @@ export default {
       ...config.db,
 
       seeds: {
-        directory: 'seeds-prod',
+        directory: 'seeds-dev',
       },
     },
   },

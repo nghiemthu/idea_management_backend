@@ -15,7 +15,7 @@ $ yarn db:init | npm run db:init
 
 Run server:
 ```
-$ yarn build | npm run build
+$ yarn start | npm start
 ```
 
 API: 
